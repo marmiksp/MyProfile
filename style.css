@@ -479,3 +479,14 @@ body {
     color: rgb(63, 21, 102);
   }
 }
+
+#clock
+{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-weight: bold;
+  color: rgb(36, 41, 82);
+  text-align: center;
+}
