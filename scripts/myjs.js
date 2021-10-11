@@ -11,6 +11,9 @@ function currentTime()
     let hh = date.getHours();
     let mm = date.getMinutes();
     let ss = date.getSeconds();
+    let dt = date.getDate();
+    let mo = date.getMonth();
+    let yr = date.getFullYear();
     let session = "AM";
   
     if(hh == 0){
@@ -25,7 +28,7 @@ function currentTime()
      mm = (mm < 10) ? "0" + mm : mm;
      ss = (ss < 10) ? "0" + ss : ss;
       
-     let time = hh + ":" + mm + ":" + ss + " " + session;
+     let time = dt + "-" + mo + "-" + yr + "  " + hh + ":" + mm + ":" + ss + " " + session;
   
     document.getElementById("clock").innerText = time; 
     let t = setTimeout(function(){ currentTime() }, 1000);
@@ -41,18 +44,19 @@ home.style.display = "block";
 function typeit()
 {
 
-var i = 0;
-document.getElementById("write").innerHTML = "";
-var txt = 'Hey I am Marmik Patel CS Dojo';
-var speed = 200;
-typeWriter();
-function typeWriter() {
-if (i < txt.length) {
-    document.getElementById("write").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-}
-}
+    var i = 0;
+    document.getElementById("write").innerHTML = "";
+    var txt = 'Hey I am Marmik Patel';
+    var speed = 200;
+    typeWriter();
+
+    function typeWriter() {
+    if (i < txt.length) {
+        document.getElementById("write").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
+    }
 
 }
 typeit();
